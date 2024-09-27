@@ -1,24 +1,95 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Fancy letterheaded paper</title>
-    
-  </head>
-  <body>
-
+    <title>Fancy Letterheaded Paper</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://db.onlinewebfonts.com/c/5ebc67ab9ab9e86517c65dd6ac7c85aa?family=Dauphin" rel="stylesheet">
+</head>
+<body style="background-color: white;"> 
     <article>
-      <h1>Awesome<br>Company</h1>
+        <img src="img/top-image.png" alt="top image" class="top-image">
+        
+        <div class="logo-container">
+            <div class="logo-wrapper">
+                <img src="img/logo.png" alt="A simple star logo" class="star-logo">
+                <h1 class="logo-text">Awesome<br>Company</h1>
+            </div>
+        </div>
 
-      <address>
-        <p>The Awesome Company</p>
-        <p>102-112 Frail Bend Bridge<br>
-        The Dwindlings<br>
-        Little Hornet<br>
-        HX3 9ZQ<br>
-        UK</p>
-      </address>
+        <h3>Lorem Ipsum</h3>
+
+        
+
+        <div class="column" id="column1">
+            <h2>What is Lorem Ipsum?</h2>
+            <p>
+                <strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+                standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
+                it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                PageMaker including versions of Lorem Ipsum.
+            </p>
+
+            <h2>Where does it come from?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quasi praesentium minus, at eius perferendis voluptates sequi, repellendus cum nostrum facere voluptate quam incidunt explicabo qui consequatur ipsam, dolorum commodi.
+              <br>
+              <br>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum accusantium maxime aliquam iure, quidem ipsam assumenda, sint aut illo error fugiat nulla reiciendis tempore, eligendi consectetur amet molestiae. Iure, veritatis!
+            </p>
+        </div>
+
+        <div class="column" id="column2">
+            <h2>Why do we use it?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, sed? Rerum tenetur aut et neque repudiandae vero libero? Alias quasi praesentium est quis! Optio consequuntur sed, nobis hic delectus quaerat.</p>
+
+            <h2>Where can I get some?</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptate eveniet deserunt delectus aut quis deleniti fugit optio magnam. Quibusdam nobis quis magni laborum debitis consequatur reiciendis dolores! Officia, consectetur?</p>
+
+            <div class="controls">
+                <h2>Choose an Option:</h2>
+                <label>
+                    <input type="radio" name="options" value="paragraphs"> paragraphs
+                </label>
+                <label>
+                    <input type="radio" name="options" value="words"> words
+                </label>
+                <label>
+                    <input type="radio" name="options" value="bytes"> bytes
+                </label>
+                <label>
+                  <input type="radio" name="options" value="lists"> lists
+              </label>
+                <button onclick="showSelectedOption()">Submit</button>
+            </div>
+        </div>
+
+        <img src="img/bottom-image.png" alt="bottom image" class="bottom-image">
+
+        <address>
+            <p>The Awesome Company</p>
+            <p>102-112 Frail Bend Bridge<br>
+            The Dwindlings<br>
+            Little Hornet<br>
+            HX3 9ZQ<br>
+            UK</p>
+        </address>
     </article>
-  </body>
+
+    <script>
+        function showSelectedOption() {
+            const options = document.getElementsByName('options');
+            let selectedValue;
+            for (const option of options) {
+                if (option.checked) {
+                    selectedValue = option.value;
+                    break;
+                }
+            }
+            alert(selectedValue ? selectedValue : "No option selected");
+        }
+    </script>
+</body>
 </html>
